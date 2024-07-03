@@ -55,8 +55,7 @@ class _MyHomeState extends State<Myhomepage>{
   }
   @override
   Widget build(BuildContext context){
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
           bottomNavigationBar: CurvedNavigationBar(
             index: 0,
             onTap: _changepage,
@@ -66,10 +65,10 @@ class _MyHomeState extends State<Myhomepage>{
             animationCurve: Curves.easeIn,
             animationDuration: Duration(milliseconds: 600),
             items: [
-              Icon(Icons.add, size: 30, color: Colors.white),
-              Icon(Icons.camera, size: 30, color: Colors.white),
-              Icon(Icons.message, size: 30, color: Colors.white),
-              Icon(Icons.image, size: 30, color: Colors.white)
+             const Icon(Icons.add, size: 30, color: Colors.white),
+             const Icon(Icons.camera, size: 30, color: Colors.white),
+             const Icon(Icons.message, size: 30, color: Colors.white),
+              const Icon(Icons.image, size: 30, color: Colors.white)
             ]
           ),
             floatingActionButton: FloatingActionButton.extended(
@@ -79,14 +78,14 @@ class _MyHomeState extends State<Myhomepage>{
                 splashColor: Colors.pink,
               ),
             appBar: AppBar(
-                title: Text('First app',
+                title:const Text('First app',
                     style: TextStyle(
                         fontSize: 25,
                         color: Colors.white,
                         fontWeight: FontWeight.bold)),
                 backgroundColor: Colors.purple),
             body: DataTab()
-            ));
+            );
   }
 }
 

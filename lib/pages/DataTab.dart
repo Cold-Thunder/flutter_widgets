@@ -1,3 +1,5 @@
+import 'package:first_app/activities/DatePick.dart';
+import 'package:first_app/activities/ForScreen.dart';
 import 'package:flutter/material.dart';
 
 class DataTab extends StatefulWidget{
@@ -6,12 +8,44 @@ class DataTab extends StatefulWidget{
 }
 
 class _DataTab extends State<DataTab>{
+  ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+    backgroundColor: Colors.purple,
+    shape:const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(10))
+    )
+  );
+
   @override
   Widget build(BuildContext context){
     return Center(
       child: Container(
         alignment: Alignment.center,
-        child: Text('data table')
+        child: Column(
+          children: <Widget>[
+            Container(
+              child: ElevatedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context)=> FormScreen())
+                  );
+                },
+                style: buttonStyle,
+                child: const Text('Create Account', style: TextStyle(fontSize: 22, color: Colors.white))
+              )
+            ),
+            Container(
+              child: ElevatedButton(
+                onPressed: (){
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=>DatePick()));
+                },
+                  style: buttonStyle,
+                child: const Text('Go to DatePicker', style: TextStyle(fontSize: 22, color: Colors.white))
+              )
+            )
+          ]
+        )
       )
     );
   }

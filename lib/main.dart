@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:first_app/pages/NewHome.dart';
+import 'package:first_app/screens/SplashScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Myhomepage()
+      home: Splash()
     );
   }
 }
