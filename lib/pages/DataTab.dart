@@ -1,5 +1,6 @@
 import 'package:first_app/activities/DatePick.dart';
 import 'package:first_app/activities/ForScreen.dart';
+import 'package:first_app/activities/Range.dart';
 import 'package:flutter/material.dart';
 
 class DataTab extends StatefulWidget{
@@ -42,6 +43,17 @@ class _DataTab extends State<DataTab>{
                 },
                   style: buttonStyle,
                 child: const Text('Go to DatePicker', style: TextStyle(fontSize: 22, color: Colors.white))
+              )
+            ),
+            Container(
+              child: ElevatedButton(
+                child: const Text('Go to Range', style: TextStyle(fontSize: 22, color: Colors.white)),
+                style: buttonStyle,
+                onPressed: (){
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=>Range())
+                  );
+                },
               )
             )
           ]
