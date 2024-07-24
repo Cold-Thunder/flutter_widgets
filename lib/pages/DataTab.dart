@@ -1,6 +1,7 @@
 import 'package:first_app/activities/DatePick.dart';
 import 'package:first_app/activities/ForScreen.dart';
 import 'package:first_app/activities/Range.dart';
+import 'package:first_app/activities/formPract.dart';
 import 'package:flutter/material.dart';
 
 class DataTab extends StatefulWidget{
@@ -54,6 +55,20 @@ class _DataTab extends State<DataTab>{
                   MaterialPageRoute(builder: (context)=>Range())
                   );
                 },
+              )
+            ),
+            Container(
+              child: ElevatedButton(
+                style: buttonStyle,
+                child: const Text('Go to Form Pract', style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white
+               )),
+                onPressed: (){
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>FormPract())
+                  );
+                }
               )
             )
           ]
